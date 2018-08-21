@@ -3,6 +3,8 @@
 
 A quick and easy to use Generic Recyclerview adapter for databinding recyclerview.
 
+<img src="https://github.com/eddykwang/quickrecyclerviewadapter/blob/master/screenshot/Screenshot_1.png" width="250">
+
 ```
 allprojects {
   repositories {
