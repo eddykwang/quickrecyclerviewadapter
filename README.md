@@ -1,8 +1,11 @@
 # quickrecyclerviewadapter
 [![](https://jitpack.io/v/eddykwang/quickrecyclerviewadapter.svg)](https://jitpack.io/#eddykwang/quickrecyclerviewadapter)
 
-A quick and easy to use Generic Recyclerview adapter for databinding recyclerview.
+### A quick and easy to use Generic Recyclerview adapter for databinding recyclerview.
 
+<img src="https://github.com/eddykwang/quickrecyclerviewadapter/blob/master/screenshot/Screenshot_1.png" width="250">
+
+## Dependency
 ```
 allprojects {
   repositories {
@@ -18,7 +21,7 @@ dependencies {
 ```
 
 # How to use
-
+## Basic usage
 ``` java
 /**
 QuickRecyclerview takse three parameters:
@@ -80,3 +83,60 @@ public class RecyclerviewItemViewModel {
   }
 }
 ```
+## Advance Usage
+You also can extend ```QuickRecyclerViewBaseAdapter``` class to do more custom usage.
+
+For example:
+```java
+
+public class MyAdapter extends QuickRecyclerViewBaseAdapter {
+  private final List<RecyclerviewItemViewModel> list;
+  private final int layoutId = R.layout.layout_recyclerview_item;
+
+  MyAdapter(List<RecyclerviewItemViewModel> list) {
+    super(com.eddystudio.quickrecyclerviewadapterdemo.BR.vm);
+    this.list = list;
+  }
+
+  @Override
+  public void onBindViewHolder(@NonNull QuickRecyclerViewBaseAdapter.QuickRecyclerViewHolder quickRecyclerViewHolder, int i) {
+    super.onBindViewHolder(quickRecyclerViewHolder, i);
+    //quickRecyclerViewHolder.itemView.findViewById(...) 
+    // you can get the view here to do whatever you want
+  }
+
+  public void setData(List<RecyclerviewItemViewModel> list) {
+    this.list.clear();
+    this.list.addAll(list);
+    this.notifyDataSetChanged();
+  }
+
+  public void addDataInPos(int pos, RecyclerviewItemViewModel item) {
+    this.list.add(pos, item);
+    this.notifyItemInserted(pos);
+  }
+
+  // ... Do whatever you want for the adapter
+
+  @Override
+  protected Object getObjectForPosition(int position) {
+    return list.get(position);
+  }
+
+  @Override
+  protected int getLayoutIdForPosition(int position) {
+    return getLayoutId();
+  }
+
+  @Override
+  protected int getLayoutId() {
+    return layoutId;
+  }
+
+  @Override
+  public int getItemCount() {
+    return list.size();
+  }
+}
+
+````
