@@ -12,7 +12,7 @@ public abstract class QuickRecyclerViewBaseAdapter extends RecyclerView.Adapter<
 
   private final int bindId;
 
-  QuickRecyclerViewBaseAdapter(int bindId) {this.bindId = bindId;}
+  public QuickRecyclerViewBaseAdapter(int bindId) {this.bindId = bindId;}
 
   @NonNull
   @Override
@@ -40,7 +40,7 @@ public abstract class QuickRecyclerViewBaseAdapter extends RecyclerView.Adapter<
 
   protected abstract int getLayoutId();
 
-  class QuickRecyclerViewHolder extends RecyclerView.ViewHolder {
+  public class QuickRecyclerViewHolder extends RecyclerView.ViewHolder {
     private final ViewDataBinding binding;
 
     public QuickRecyclerViewHolder(@NonNull View itemView) {
