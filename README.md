@@ -1,10 +1,11 @@
 # quickrecyclerviewadapter
 [![](https://jitpack.io/v/eddykwang/quickrecyclerviewadapter.svg)](https://jitpack.io/#eddykwang/quickrecyclerviewadapter)
 
-A quick and easy to use Generic Recyclerview adapter for databinding recyclerview.
+### A quick and easy to use Generic Recyclerview adapter for databinding recyclerview.
 
 <img src="https://github.com/eddykwang/quickrecyclerviewadapter/blob/master/screenshot/Screenshot_1.png" width="250">
 
+## Dependency
 ```
 allprojects {
   repositories {
@@ -20,7 +21,7 @@ dependencies {
 ```
 
 # How to use
-
+## Basic usage
 ``` java
 /**
 QuickRecyclerview takse three parameters:
@@ -82,3 +83,10 @@ public class RecyclerviewItemViewModel {
   }
 }
 ```
+## Advance Usage
+You also can extend ```QuickRecyclerViewBaseAdapter``` class to do more custom usage.
+
+For example:
+```java
+
+````
