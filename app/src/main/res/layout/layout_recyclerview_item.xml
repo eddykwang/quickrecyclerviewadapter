@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+      name="vm"
+      type="com.eddystudio.quickrecyclerviewadapterdemo.RecyclerviewItemViewModel"/>
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginBottom="8dp"
+      android:background="@mipmap/ic_launcher"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+      android:id="@+id/title_tv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:text="@{vm.title}"
+      android:textAppearance="@style/TextAppearance.AppCompat.Title"
+      app:layout_constraintStart_toEndOf="@+id/imageView"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Cupcake"/>
+
+    <TextView
+      android:id="@+id/decrip_tv"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="8dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginRight="8dp"
+      android:maxLines="2"
+      android:text="@{vm.description}"
+      app:layout_constraintBottom_toBottomOf="@+id/imageView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/imageView"
+      app:layout_constraintTop_toBottomOf="@+id/title_tv"
+      tools:text="On April 27, 2009, the Android 1.5 update was released"/>
+  </android.support.constraint.ConstraintLayout>
+</layout>
