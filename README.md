@@ -16,7 +16,7 @@ allprojects {
 ```
 ```
 dependencies {
-  implementation 'com.github.eddykwang:quickrecyclerviewadapter:1.01'
+	implementation 'com.github.eddykwang:quickrecyclerviewadapter:1.02'
 }
 ```
 
