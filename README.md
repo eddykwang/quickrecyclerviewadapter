@@ -1,7 +1,7 @@
-# quickrecyclerviewadapter
+# Quick Recyclerview Adapter
 [![](https://jitpack.io/v/eddykwang/quickrecyclerviewadapter.svg)](https://jitpack.io/#eddykwang/quickrecyclerviewadapter)
 
-### A quick and easy to use Generic Recyclerview adapter for databinding recyclerview.
+### A quick and easy to use generic Recyclerview adapter for databinding recyclerview.
 
 <img src="https://github.com/eddykwang/quickrecyclerviewadapter/blob/master/screenshot/Screenshot_1.png" width="250">
 
