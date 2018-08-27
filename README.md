@@ -2,6 +2,7 @@
 [![](https://jitpack.io/v/eddykwang/quickrecyclerviewadapter.svg)](https://jitpack.io/#eddykwang/quickrecyclerviewadapter)
 
 ### A quick and easy to use generic Recyclerview adapter for databinding recyclerview.
+#### You have to use datadbing for your recyclerview in order for you to use this lib.
 
 <img src="https://github.com/eddykwang/quickrecyclerviewadapter/blob/master/screenshot/Screenshot_1.png" width="250">
 
